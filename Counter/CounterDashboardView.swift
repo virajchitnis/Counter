@@ -50,7 +50,40 @@ struct CounterDashboardView: View {
                 }
             }
             .navigationBarTitle("Counters")
-        }.onAppear(perform: loadCounters)
+        }.onAppear(perform: readCountersFromFile)
+    }
+    
+    func readCountersFromFile() {
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("counters.plist")
+        do {
+            let xmlData = try Data(contentsOf: path)
+            let savedCounters: [CodableCounter] = try! PropertyListDecoder().decode(CodableCounters.self, from: xmlData)
+            var newCounters: [Counter] = []
+            for counter in savedCounters {
+                let newCounter = Counter(id: counter.id, name: counter.name, description: counter.description, count: counter.count)
+                newCounters.append(newCounter)
+            }
+            self.counters = newCounters
+        } catch {
+            print("No saved counters found")
+        }
+    }
+    
+    func saveCountersToFile() {
+        let encoder = PropertyListEncoder()
+        encoder.outputFormat = .xml
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("counters.plist")
+        var tempCounters: [CodableCounter] = []
+        for currCounter in self.counters {
+            let newCurrCounter = CodableCounter(id: currCounter.id, name: currCounter.name, description: currCounter.description, count: currCounter.count)
+            tempCounters.append(newCurrCounter)
+        }
+        do {
+            let data = try encoder.encode(tempCounters)
+            try data.write(to: path)
+        } catch {
+            print(error)
+        }
     }
     
     func loadCounters() {
@@ -67,6 +100,7 @@ struct CounterDashboardView: View {
             self.newCounterName = ""
             self.newCounterCount = ""
             self.counters.append(newCounter)
+            self.saveCountersToFile()
         }
         self.newCounterDescription = ""
         self.addCounter = !self.addCounter

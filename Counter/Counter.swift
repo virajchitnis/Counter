@@ -30,6 +30,7 @@ class Counter: ObservableObject {
     }
 }
 
+typealias CodableCounters = [CodableCounter]
 struct CodableCounter: Codable {
     var id: UUID
     var name: String
