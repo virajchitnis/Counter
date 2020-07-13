@@ -10,6 +10,7 @@ import SwiftUI
 
 struct CounterItemView: View {
     @ObservedObject var counter: Counter
+    var saveCallBack: () -> Void
     
     var body: some View {
         VStack {
@@ -20,6 +21,7 @@ struct CounterItemView: View {
             HStack {
                 Button(action: {
                     self.counter.increment(by: 1)
+                    self.saveCallBack()
                 }) {
                     Image(systemName: "plus.circle")
                 }
@@ -30,6 +32,7 @@ struct CounterItemView: View {
                     .padding(.horizontal)
                 Button(action: {
                     self.counter.decrement(by: 1)
+                    self.saveCallBack()
                 }) {
                     Image(systemName: "minus.circle")
                 }
@@ -42,6 +45,6 @@ struct CounterItemView: View {
 
 struct CounterItemView_Previews: PreviewProvider {
     static var previews: some View {
-        CounterItemView(counter: Counter(name: "Counter Name"))
+        CounterItemView(counter: Counter(name: "Counter Name"), saveCallBack: {})
     }
 }

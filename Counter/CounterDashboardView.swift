@@ -19,7 +19,7 @@ struct CounterDashboardView: View {
         NavigationView {
             ScrollView {
                 ForEach(counters, id: \.id) { counter in
-                    CounterItemView(counter: counter)
+                    CounterItemView(counter: counter, saveCallBack: self.saveCountersToFile)
                         .frame(maxWidth: .infinity)
                 }
                 .padding(.all)
