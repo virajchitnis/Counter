@@ -20,10 +20,10 @@ struct CounterItemView: View {
                 .foregroundColor(Color.gray)
             HStack {
                 Button(action: {
-                    self.counter.increment(by: 1)
+                    self.counter.decrement(by: 1)
                     self.saveCallBack()
                 }) {
-                    Image(systemName: "plus.circle")
+                    Image(systemName: "minus.circle")
                 }
                 .font(.title)
                 Text("\(self.counter.count)")
@@ -31,10 +31,10 @@ struct CounterItemView: View {
                     .fontWeight(.thin)
                     .padding(.horizontal)
                 Button(action: {
-                    self.counter.decrement(by: 1)
+                    self.counter.increment(by: 1)
                     self.saveCallBack()
                 }) {
-                    Image(systemName: "minus.circle")
+                    Image(systemName: "plus.circle")
                 }
                 .font(.title)
             }
