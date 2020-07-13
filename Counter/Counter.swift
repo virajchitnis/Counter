@@ -8,10 +8,11 @@
 
 import Foundation
 
-class Counter: Codable {
+class Counter: ObservableObject {
+    let id = UUID()
     var name: String
     var description: String
-    var count: Int
+    @Published var count: Int
     
     init(name: String, description: String = "", count: Int = 0) {
         self.name = name

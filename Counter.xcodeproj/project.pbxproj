@@ -15,6 +15,7 @@
 		C0A0A1FB24BC892900648277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A0A1F924BC892900648277 /* LaunchScreen.storyboard */; };
 		C0A0A20324BC8B1700648277 /* CounterDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A0A20224BC8B1700648277 /* CounterDashboardView.swift */; };
 		C0A0A20524BC98A700648277 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A0A20424BC98A700648277 /* Counter.swift */; };
+		C0A0A20724BC9AA900648277 /* CounterItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A0A20624BC9AA900648277 /* CounterItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C0A0A1FC24BC892900648277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0A0A20224BC8B1700648277 /* CounterDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterDashboardView.swift; sourceTree = "<group>"; };
 		C0A0A20424BC98A700648277 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		C0A0A20624BC9AA900648277 /* CounterItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				C0A0A1F024BC892800648277 /* SceneDelegate.swift */,
 				C0A0A1F224BC892800648277 /* ContentView.swift */,
 				C0A0A20224BC8B1700648277 /* CounterDashboardView.swift */,
+				C0A0A20624BC9AA900648277 /* CounterItemView.swift */,
 				C0A0A20424BC98A700648277 /* Counter.swift */,
 				C0A0A1F424BC892900648277 /* Assets.xcassets */,
 				C0A0A1F924BC892900648277 /* LaunchScreen.storyboard */,
@@ -156,6 +159,7 @@
 				C0A0A20324BC8B1700648277 /* CounterDashboardView.swift in Sources */,
 				C0A0A1EF24BC892800648277 /* AppDelegate.swift in Sources */,
 				C0A0A1F124BC892800648277 /* SceneDelegate.swift in Sources */,
+				C0A0A20724BC9AA900648277 /* CounterItemView.swift in Sources */,
 				C0A0A1F324BC892800648277 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

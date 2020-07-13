@@ -9,49 +9,13 @@
 import SwiftUI
 
 struct CounterDashboardView: View {
+    @State private var counters: [Counter] = []
+    
     var body: some View {
         NavigationView {
             ScrollView {
-                VStack {
-                    Text("Counter One")
-                        .font(.headline)
-                    Text("More info about the counter")
-                        .foregroundColor(Color.gray)
-                    HStack {
-                        Button(action: {}) {
-                            Image(systemName: "plus.circle")
-                        }
-                        .font(.title)
-                        Text("34")
-                            .font(.largeTitle)
-                            .fontWeight(.thin)
-                            .padding(.horizontal)
-                        Button(action: {}) {
-                            Image(systemName: "minus.circle")
-                        }
-                        .font(.title)
-                    }
-                }
-                .padding(.all)
-                VStack {
-                    Text("Counter Two")
-                        .font(.headline)
-                    Text("More info about the second counter")
-                        .foregroundColor(Color.gray)
-                    HStack {
-                        Button(action: {}) {
-                            Image(systemName: "plus.circle")
-                        }
-                        .font(.title)
-                        Text("345")
-                            .font(.largeTitle)
-                            .fontWeight(.thin)
-                            .padding(.horizontal)
-                        Button(action: {}) {
-                            Image(systemName: "minus.circle")
-                        }
-                        .font(.title)
-                    }
+                ForEach(counters, id: \.id) { counter in
+                    CounterItemView(counter: counter)
                 }
                 .padding(.all)
                 Button(action: {}) {
@@ -62,7 +26,15 @@ struct CounterDashboardView: View {
                 }
             }
             .navigationBarTitle("Counters")
-        }
+        }.onAppear(perform: loadCounters)
+    }
+    
+    func loadCounters() {
+        let newCounters = [
+            Counter(name: "Blah 1", description: "First counter for trial"),
+            Counter(name: "Blah 2")
+        ]
+        self.counters = newCounters
     }
 }
 
