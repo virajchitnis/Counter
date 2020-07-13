@@ -16,6 +16,7 @@
 		C0A0A20324BC8B1700648277 /* CounterDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A0A20224BC8B1700648277 /* CounterDashboardView.swift */; };
 		C0A0A20524BC98A700648277 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A0A20424BC98A700648277 /* Counter.swift */; };
 		C0A0A20724BC9AA900648277 /* CounterItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A0A20624BC9AA900648277 /* CounterItemView.swift */; };
+		C0E14C4024BCCD6100648277 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C0E14C3F24BCCD6100648277 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		C0A0A20224BC8B1700648277 /* CounterDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterDashboardView.swift; sourceTree = "<group>"; };
 		C0A0A20424BC98A700648277 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		C0A0A20624BC9AA900648277 /* CounterItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterItemView.swift; sourceTree = "<group>"; };
+		C0E14C3F24BCCD6100648277 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 		C0A0A1E224BC892800648277 = {
 			isa = PBXGroup;
 			children = (
+				C0E14C3F24BCCD6100648277 /* LICENSE */,
 				C0A0A1ED24BC892800648277 /* Counter */,
 				C0A0A1EC24BC892800648277 /* Products */,
 			);
@@ -144,6 +147,7 @@
 			files = (
 				C0A0A1FB24BC892900648277 /* LaunchScreen.storyboard in Resources */,
 				C0A0A1F824BC892900648277 /* Preview Assets.xcassets in Resources */,
+				C0E14C4024BCCD6100648277 /* LICENSE in Resources */,
 				C0A0A1F524BC892900648277 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
