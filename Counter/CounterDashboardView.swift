@@ -38,6 +38,7 @@ struct CounterDashboardView: View {
                             Text("Done")
                         }
                     }
+                    .frame(maxWidth: .infinity)
                 } else {
                     Button(action: {
                         self.addCounter = !self.addCounter
@@ -47,6 +48,7 @@ struct CounterDashboardView: View {
                             Text("Counter")
                         }
                     }
+                    .frame(maxWidth: .infinity)
                 }
             }
             .navigationBarTitle("Counters")
