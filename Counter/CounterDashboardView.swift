@@ -21,6 +21,17 @@ struct CounterDashboardView: View {
                 ForEach(counters, id: \.id) { counter in
                     CounterItemView(counter: counter, saveCallBack: self.saveCountersToFile)
                         .frame(maxWidth: .infinity)
+                        .contextMenu {
+                            Button(action: {
+                                self.counters.removeAll(where: { $0.id == counter.id })
+                                self.saveCountersToFile()
+                            }) {
+                                HStack {
+                                    Image(systemName: "trash")
+                                    Text("Delete")
+                                }
+                            }
+                        }
                 }
                 .padding(.all)
                 if self.addCounter {
