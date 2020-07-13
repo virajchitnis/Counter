@@ -49,6 +49,17 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSUbiquitousContainers</key>
+	<dict>
+		<key>iCloud.com.virajchitnis.Counter</key>
+		<dict/>
+		<key>NSUbiquitousContainerSupportedFolderLevels</key>
+		<string>Any</string>
+		<key>NSUbiquitousContainerName</key>
+		<string>Counter</string>
+		<key>NSUbiquitousContainerIsDocumentScopePublic</key>
+		<true/>
+	</dict>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

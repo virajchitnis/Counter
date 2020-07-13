@@ -8,6 +8,9 @@
 
 import SwiftUI
 
+let iCloudContainerIdentifier: String = "iCloud.com.virajchitnis.Counter"
+let plistFile: String = "counters.plist"
+
 struct CounterDashboardView: View {
     @State private var counters: [Counter] = []
     @State private var addCounter: Bool = false
@@ -67,7 +70,8 @@ struct CounterDashboardView: View {
     }
     
     func readCountersFromFile() {
-        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("counters.plist")
+        let documentsPath = (FileManager.default.url(forUbiquityContainerIdentifier: iCloudContainerIdentifier)?.appendingPathComponent("Documents"))!
+        let path = documentsPath.appendingPathComponent(plistFile)
         do {
             let xmlData = try Data(contentsOf: path)
             let savedCounters: [CodableCounter] = try! PropertyListDecoder().decode(CodableCounters.self, from: xmlData)
@@ -85,7 +89,8 @@ struct CounterDashboardView: View {
     func saveCountersToFile() {
         let encoder = PropertyListEncoder()
         encoder.outputFormat = .xml
-        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("counters.plist")
+        let documentsPath = (FileManager.default.url(forUbiquityContainerIdentifier: iCloudContainerIdentifier)?.appendingPathComponent("Documents"))!
+        let path = documentsPath.appendingPathComponent(plistFile)
         var tempCounters: [CodableCounter] = []
         for currCounter in self.counters {
             let newCurrCounter = CodableCounter(id: currCounter.id, name: currCounter.name, description: currCounter.description, count: currCounter.count)
