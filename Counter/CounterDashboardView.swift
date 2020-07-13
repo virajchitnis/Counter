@@ -88,22 +88,14 @@ struct CounterDashboardView: View {
         }
     }
     
-    func loadCounters() {
-        let newCounters = [
-            Counter(name: "Blah 1", description: "First counter for trial"),
-            Counter(name: "Blah 2")
-        ]
-        self.counters = newCounters
-    }
-    
     func addNewCounter() {
-        if !self.newCounterName.isEmpty && !self.newCounterCount.isEmpty {
+        if !self.newCounterName.isEmpty {
             let newCounter = Counter(name: self.newCounterName, description: self.newCounterDescription, count: Int(self.newCounterCount) ?? 0)
             self.newCounterName = ""
-            self.newCounterCount = ""
             self.counters.append(newCounter)
             self.saveCountersToFile()
         }
+        self.newCounterCount = ""
         self.newCounterDescription = ""
         self.addCounter = !self.addCounter
     }
