@@ -13,6 +13,7 @@
 		C0A0A1F524BC892900648277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0A0A1F424BC892900648277 /* Assets.xcassets */; };
 		C0A0A1F824BC892900648277 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0A0A1F724BC892900648277 /* Preview Assets.xcassets */; };
 		C0A0A1FB24BC892900648277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A0A1F924BC892900648277 /* LaunchScreen.storyboard */; };
+		C0A0A20324BC8B1700648277 /* CounterDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A0A20224BC8B1700648277 /* CounterDashboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C0A0A1F724BC892900648277 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C0A0A1FA24BC892900648277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0A0A1FC24BC892900648277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0A0A20224BC8B1700648277 /* CounterDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterDashboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				C0A0A1EE24BC892800648277 /* AppDelegate.swift */,
 				C0A0A1F024BC892800648277 /* SceneDelegate.swift */,
 				C0A0A1F224BC892800648277 /* ContentView.swift */,
+				C0A0A20224BC8B1700648277 /* CounterDashboardView.swift */,
 				C0A0A1F424BC892900648277 /* Assets.xcassets */,
 				C0A0A1F924BC892900648277 /* LaunchScreen.storyboard */,
 				C0A0A1FC24BC892900648277 /* Info.plist */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0A0A20324BC8B1700648277 /* CounterDashboardView.swift in Sources */,
 				C0A0A1EF24BC892800648277 /* AppDelegate.swift in Sources */,
 				C0A0A1F124BC892800648277 /* SceneDelegate.swift in Sources */,
 				C0A0A1F324BC892800648277 /* ContentView.swift in Sources */,
